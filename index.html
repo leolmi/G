@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="flex.css" />
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body flex-row>
+    <div class="tools-container no-print" flex-column>
+        <div class="input-container" flex-column>
+            <label>Title</label>
+            <input type="text" G-bind="title">
+            <label>Description</label>
+            <textarea class="textarea-v" G-bind="description"></textarea>
+        </div>
+        <div class="row" flex-row>
+            <button onclick="G.exportFile()">EXPORT</button>
+            <button onclick="G.importFile()">IMPORT</button>
+            <span flex></span>
+            <button class="backcolor-warn" onclick="G.clear(event)">CLEAR</button>
+        </div>
+        <div class="row" flex-row>
+            <input type="integer" onchange="G.zoom(event.target.value)" placeholder="zoom (100%)" flex>
+            <button class="backcolor-primary" onclick="G.print()">PRINT</button>
+        </div>
+        <divider></divider>
+        <div class="row" flex-row>
+            <button id="g-bg-grid" onclick="G.setBackground('grid')">SNAP GRID</button>
+            <button id="g-bg-cm" onclick="G.setBackground('cm')">GRAPH PAPER</button>
+            <button id="g-bg-white" onclick="G.setBackground('white')">WHITE</button>
+        </div>
+        <div class="row" flex-row>
+            <button id="g-copy" onclick="G.copy()">COPY</button>
+            <button id="g-paste" onclick="G.paste()">PASTE</button>
+            <span flex></span>
+            <button id="g-remove" class="backcolor-warn" onclick="G.remove(event)">REMOVE</button>
+        </div>
+        <div class="row" flex-row>
+            <button id="g-lock" onclick="G.lock()">LOCK</button>
+            <button id="g-unlock" onclick="G.unlock()">UNLOCK</button>
+        </div>
+        <div class="row" flex-row>
+            <button id="g-group" onclick="G.group()">GROUP</button>
+            <button id="g-ungroup" onclick="G.ungroup()">UNGROUP</button>
+            <span flex></span>
+            <button id="g-lock-action" onclick="G.toggleLockAction()">LOCK ACTION</button>
+        </div>
+        <divider></divider>
+        <div class="row" flex-row>
+            <button id="g-a-line" onclick="G.initAction('line')">LINE</button>
+            <button id="g-a-rect" onclick="G.initAction('rect')">RECTANGLE</button>
+            <button id="g-a-circle" onclick="G.initAction('circle')">CIRCLE</button>
+        </div>
+        <div id="elements" class="column" flex-column></div>
+    </div>
+    <div g-container flex></div>
+    <script src="lib/FileSaver.js"></script>
+    <script src="G.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

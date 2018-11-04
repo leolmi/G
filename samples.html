@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <svg>
+        <defs>
+            <linearGradient id="Gradient01">
+                <stop offset="20%" stop-color="#39F" />
+                <stop offset="90%" stop-color="#F3F" />
+            </linearGradient>
+        </defs>
+        <rect id="R1" draggable exportable x="200" y="100" rx="6" ry="6" height="140" width="240" fill="orange"></rect>
+        <rect id="R2" draggable exportable x="100" y="300" rx="6" ry="6" height="140" width="240" fill="url(#Gradient01)"></rect>
+
+        <polyline id="P2" transform="scale(2 2)" draggable exportable points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
+            marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+    </svg>
+
+</body>
+</html>

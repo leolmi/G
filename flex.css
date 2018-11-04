@@ -1,0 +1,57 @@
+:root {
+    --light-line-color: rgba(200,200,200,.1);
+}
+
+[flex] {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    box-sizing: border-box;
+}
+
+[flex-column] {
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+}
+[flex-column-reverse] {
+    flex-direction: column-reverse;
+}
+[flex-row] {
+    flex-direction: row;
+}
+[flex-row-reverse] {
+    flex-direction: row-reverse;
+}
+
+
+[flex-column], [flex-row] {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+[flex-column] > [flex] {
+    min-height: 0;
+}
+
+[draggable] {
+    cursor: move;
+}
+
+[flex-column] > divider {
+    border-bottom: var(--light-line-color) 1px solid;
+    height: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+[flex-row] > divider {
+    border-right: var(--light-line-color) 1px solid;
+    width: 10px;
+    margin-right: 10px;
+    display: block;
+}

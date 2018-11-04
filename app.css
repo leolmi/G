@@ -1,0 +1,126 @@
+:root {
+    --light-line-color: rgba(200,200,200,.1);
+    --warn-color: tomato;
+    --background-color: #222;
+    --disabled-background-color: #999;
+    --color: #ddd;
+    --input-background-color: rgba(250,250,250,.9);
+    --primary-color: #6eb4ef;
+    --active-color: #3fbb3f;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--color);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+input, textarea {
+    border: none;
+    padding: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: var(--input-background-color);
+}
+
+.textarea-v {
+    resize: vertical;
+}
+.textarea-lock {
+    resize: none;
+}
+
+button {
+    border: none;
+    padding: 6px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    opacity: .9;
+    margin: 0 2px;
+    outline: none;
+}
+button:not([disabled]) {
+    cursor: pointer;
+}
+button[disabled] {
+    pointer-events: none;
+    opacity: .2;
+    background-color: var(--input-background-color);
+}
+
+button[active] {
+    opacity: 1;
+    background-color: var(--active-color);
+}
+button:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+[template] {
+    display: none;
+}
+
+.input-container {
+    padding: 10px 0;
+}
+
+.input-container input {
+    margin-bottom: 10px;
+}
+.input-container label {
+    font-size: .85em;
+    font-family: monospace;
+    display: block;
+}
+
+.container {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    height: 100px;
+    bottom: 0;
+}
+
+.tools-container {
+    width: 300px;
+    height: 100vh;
+    padding: 20px;
+}
+
+[g-container] {
+    background-color: bisque;
+}
+
+.row {
+    margin: 5px 0;
+}
+
+.backcolor-warn {
+    background-color: var(--warn-color);
+}
+.backcolor-primary {
+    background-color: var(--primary-color);
+}
+
+.element-button {
+    margin: 4px 0;
+    background-color: cornflowerblue;
+}
