@@ -412,7 +412,7 @@
       return atrb;
     }
   };
-  ['Function','Date','Arr ay','Number','Error', 'Event'].forEach(c => _G_u['is' + c] = (o) => Object.prototype.toString.call(o) === '[object ' + c + ']');
+  ['Function','Date','Array','Number','Error', 'Event'].forEach(c => _G_u['is' + c] = (o) => Object.prototype.toString.call(o) === '[object ' + c + ']');
 
 
   const _G_converter = {
